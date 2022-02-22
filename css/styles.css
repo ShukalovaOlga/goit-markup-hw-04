@@ -183,8 +183,6 @@ img {
   max-width: 200;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  /* width: 200px;
-  height: 50px; */
 
   font-family: inherit;
   font-weight: 700;
@@ -199,6 +197,37 @@ img {
 /* Competence */
 .competence-list {
   display: flex;
+}
+
+.competence-item::before {
+  content: "";
+  display: inline-block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-size: 70px, 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 25px, 100px;
+
+  background-color: var(--team-bg);
+}
+
+.competence-item:nth-child(1)::before {
+  background-image: url("../images/decoration/antenna.svg");
+}
+
+.competence-item:nth-child(2)::before {
+  background-image: url("../images/decoration/clock.svg");
+}
+
+.competence-item:nth-child(3)::before {
+  background-image: url("../images/decoration/diagram.svg");
+}
+
+.competence-item:nth-child(4)::before {
+  background-image: url("../images/decoration/astronaut.svg");
 }
 
 .competence-item {
@@ -256,10 +285,6 @@ img {
   background-color: var(--team-bg);
 }
 
-.container-team {
-  display: flex;
-}
-
 .team-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -270,6 +295,10 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-cl);
+}
+
+.container-team {
+  display: flex;
 }
 
 .team-item {
@@ -311,6 +340,23 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--txt-cl);
+}
+
+/* Clients */
+.clients-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-cl);
+}
+
+.container-clients {
+  display: flex;
 }
 
 /* Footer */
@@ -409,6 +455,12 @@ img {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-item {
