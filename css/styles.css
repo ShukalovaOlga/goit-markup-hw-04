@@ -120,41 +120,18 @@ img {
 .contacts-list {
   display: flex;
   margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  border: none;
 }
 
-.contacts-item::before {
-  content: "";
+.contacts-item {
   display: inline-block;
   margin-right: 10px;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .contacts-item:not(:last-child) {
   margin-right: 50px;
-}
-
-.contacts-item:nth-child(1)::before {
-  background-image: url("../images/decoration/envelope-small.svg");
-  width: 16px;
-  height: 12px;
-  /* padding-top: 34px;
-  padding-bottom: 34px; */
-}
-
-.contacts-item:nth-child(2)::before {
-  background-image: url("../images/decoration/smartphone-small.svg");
-  width: 10px;
-  height: 16px;
-  /* padding-top: 32px;
-  padding-bottom: 32px; */
-}
-
-.contacts-phone:hover,
-.contacts-phone:focus {
-  color: var(--accent-txt-cl);
 }
 
 .contacts-phone {
@@ -167,6 +144,27 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--txt-cl);
+}
+
+.contacts-phone:hover,
+.contacts-phone:focus {
+  color: var(--accent-txt-cl);
+}
+
+.envelope {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.icon-phone {
+  fill: currentColor;
 }
 
 /* Hero */
@@ -497,9 +495,6 @@ img {
   padding: 6px 22px;
   min-width: 38px;
   border: 1px solid transparent;
-
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 
   font-family: inherit;
@@ -515,6 +510,8 @@ img {
 .filters-item-btn:focus {
   color: var(--light-txt-cl);
   background: var(--accent-bg-cl);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-card-set {
@@ -530,8 +527,14 @@ img {
   border-left: 1px solid #eeeeee;
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.card-link {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.card-link:hover,
+.card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
